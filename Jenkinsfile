@@ -6,5 +6,12 @@ pipeline {
                 sh "./gradlew build"
             }
         }
+        stage('Build and Push Image') {
+           steps {
+               sh '''
+                    docker version
+               '''
+           }
+        }
     }
 }
