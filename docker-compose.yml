@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  spring-boot:
+    image: jtran19/spring-boot:$BUILD_NUMBER
+    build:
+      context: .
+      dockerfile: Dockerfile
