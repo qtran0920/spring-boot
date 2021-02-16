@@ -10,6 +10,8 @@ pipeline {
            steps {
                sh '''
                     docker version
+                    docker-compose version
+                    cd build && docker-compose build
                '''
            }
         }
