@@ -11,10 +11,10 @@ pipeline {
                 sh '''
                     echo $USER
                     docker version
-                    docker-compose version
-                    cd build && docker-compose build
-               '''
-           }
+                    /usr/local/bin/docker-compose version
+                    /usr/local/bin/docker-compose build
+                '''
+            }
         }
     }
 }
