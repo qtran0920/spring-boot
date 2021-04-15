@@ -24,6 +24,13 @@ test {
 	useJUnitPlatform()
 }
 
+jacocoTestReport {
+	reports {
+		xml.enabled true
+	}
+}
+test.finalizedBy jacocoTestReport
+
 sonarqube {
 	properties {
 		property 'sonar.host.url', 'http://localhost:9000'
