@@ -8,7 +8,7 @@ public class MathUtil {
 
     public static Long fibonacci(int n) {
         return Stream.iterate(new long[]{0, 1}, fibArr -> new long[]{fibArr[1], fibArr[0] + fibArr[1]})
-                     .limit(n + 1)
+                     .limit(n + 1L)
                      .map(fibArr -> fibArr[0])
                      .reduce((f, s) -> s)
                      .orElse(null);
